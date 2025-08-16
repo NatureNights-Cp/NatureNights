@@ -2,265 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NN Showroom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NatureNights</title>
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
+    body {
       font-family: Arial, sans-serif;
       background-color: #000;
-      color: #ffd700;
-      overflow: hidden;
+      color: #FFD700;
+      text-align: center;
+      margin: 0;
+      padding: 0;
     }
     header {
-      text-align: center;
       padding: 20px;
-      font-size: 2rem;
+      font-size: 2em;
       font-weight: bold;
-      background: linear-gradient(to right, #000, #111);
-      border-bottom: 2px solid #ffd700;
-    }
-    #showroom {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-      gap: 20px;
     }
     .product {
       background: #111;
-      border: 1px solid #ffd700;
       border-radius: 12px;
-      width: 220px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .product:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #ffd700;
+      padding: 20px;
+      margin: 20px auto;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(255,215,0,0.4);
     }
     .product img {
       width: 100%;
-      border-bottom: 1px solid #ffd700;
-      border-radius: 12px 12px 0 0;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
-    .product h3 {
+    .product h2 {
       margin: 10px 0;
+      font-size: 1.5em;
     }
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.9);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
+    .product p {
+      margin: 5px 0;
+      font-size: 1em;
     }
-    .modal-content {
-      background: #111;
-      border: 1px solid #ffd700;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      max-width: 420px;
-      color: #ffd700;
-    }
-    .modal-content img {
-      width: 100%;
-      border-radius: 12px;
-    }
-    .buttons {
-      margin-top: 15px;
-      display: flex;
-      justify-content: space-between;
-    }
-    .btn {
-      background: #ffd700;
-      color: #000;
+    button {
+      background-color: #FFD700;
       border: none;
+      color: #000;
       padding: 10px 20px;
+      margin: 10px 5px;
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
-      transition: background 0.3s;
     }
-    .btn:hover {
-      background: #e6c200;
-    }
-    #stickers {
-      margin-top: 10px;
-      padding: 8px;
-      border-radius: 6px;
-      border: 1px solid #ffd700;
-      background: #222;
-      color: #ffd700;
-    }
-    #city {
-      margin-top: 10px;
-      padding: 8px;
-      border-radius: 6px;
-      border: 1px solid #ffd700;
-      background: #222;
-      color: #ffd700;
+    button:hover {
+      background-color: #e6c200;
     }
   </style>
 </head>
 <body>
   <header>NatureNights</header>
-  <div id="showroom"></div>
 
-  <div class="modal" id="productModal">
-    <div class="modal-content">
-      <img id="modalImage" src="" alt="Product">
-      <h2 id="modalName"></h2>
-      <p id="modalPrice"></p>
-      <p id="modalNotes"></p>
+  <!-- Baghawat 804 -->
+  <div class="product">
+    <img src="images/baghawat804.jpg" alt="Baghawat 804">
+    <h2>Baghawat 804</h2>
+    <p>Notes: Fruity, White Floral, Sweet</p>
+    <p>Price: Rs.1900</p>
+    <button onclick="continueShopping()">Continue Shopping</button>
+    <button onclick="dispatch('Baghawat 804', 1900)">Dispatch Now</button>
+  </div>
 
-      <!-- Stickers selection (for Customized Perfumes only) -->
-      <div id="stickerSection" style="display:none;">
-        <label>Select Stickers: </label>
-        <select id="stickers">
-          <option value="1">1 Sticker</option>
-          <option value="2">2 Stickers</option>
-          <option value="3">3 Stickers</option>
-          <option value="4">4 Stickers</option>
-        </select>
-      </div>
+  <!-- Tasadum -->
+  <div class="product">
+    <img src="images/tasadum.jpg" alt="Tasadum">
+    <h2>Tasadum</h2>
+    <p>Notes: Citrus, Amber, Aromatic</p>
+    <p>Price: Rs.1900</p>
+    <button onclick="continueShopping()">Continue Shopping</button>
+    <button onclick="dispatch('Tasadum', 1900)">Dispatch Now</button>
+  </div>
 
-      <!-- City selection for DC -->
-      <div id="citySection" style="display:none;">
-        <label>Select City: </label>
-        <select id="city">
-          <option value="lahore">Lahore (DC: 400)</option>
-          <option value="islamabad">Islamabad (DC: 500)</option>
-        </select>
-      </div>
-
-      <div class="buttons">
-        <button class="btn" id="continueBtn">Continue Shopping</button>
-        <button class="btn" id="dispatchBtn">Dispatch Now</button>
-      </div>
-    </div>
+  <!-- Customized Perfumes -->
+  <div class="product">
+    <img src="images/customized.jpg" alt="Customized Perfumes">
+    <h2>Customized Perfumes</h2>
+    <p>Price starts from Rs.2300 (1 Sticker)</p>
+    <p>+50 Rs for each extra sticker</p>
+    <button onclick="continueShopping()">Continue Shopping</button>
+    <button onclick="dispatch('Customized Perfume', 2300)">Dispatch Now</button>
   </div>
 
   <script>
-    const products = [
-      { 
-        name: "Baghawat 804", 
-        image: "baghawat804.jpg", 
-        price: 1900,
-        notes: "Fruity, White Floral, Sweet",
-        custom: false
-      },
-      { 
-        name: "Tasadum", 
-        image: "tasadum.jpg", 
-        price: 1900,
-        notes: "Citrus, Amber, Aromatic",
-        custom: false
-      },
-      { 
-        name: "Customized Perfumes", 
-        image: "customized.jpg", 
-        price: 2300, // base price for 1 sticker
-        notes: "Price increases by Rs.50 per sticker",
-        custom: true
-      }
-    ];
-
-    const showroom = document.getElementById("showroom");
-    const modal = document.getElementById("productModal");
-    const modalImage = document.getElementById("modalImage");
-    const modalName = document.getElementById("modalName");
-    const modalPrice = document.getElementById("modalPrice");
-    const modalNotes = document.getElementById("modalNotes");
-    const continueBtn = document.getElementById("continueBtn");
-    const dispatchBtn = document.getElementById("dispatchBtn");
-
-    const stickerSection = document.getElementById("stickerSection");
-    const stickers = document.getElementById("stickers");
-    const citySection = document.getElementById("citySection");
-    const city = document.getElementById("city");
-
-    let selectedProduct = null;
-
-    function loadProducts() {
-      products.forEach(product => {
-        const div = document.createElement("div");
-        div.classList.add("product");
-        div.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p>Rs. ${product.price}</p>
-        `;
-        div.addEventListener("click", () => openModal(product));
-        showroom.appendChild(div);
-      });
+    function continueShopping() {
+      alert("Continue shopping for more NatureNights products!");
     }
 
-    function openModal(product) {
-      selectedProduct = product;
-      modalImage.src = product.image;
-      modalName.innerText = product.name;
-      modalPrice.innerText = "Rs. " + product.price;
-      modalNotes.innerText = "Notes: " + product.notes;
-
-      // Show/hide sticker section for custom perfumes
-      if (product.custom) {
-        stickerSection.style.display = "block";
-      } else {
-        stickerSection.style.display = "none";
-      }
-
-      // Always show city section
-      citySection.style.display = "block";
-
-      modal.style.display = "flex";
+    function dispatch(product, price) {
+      const phoneNumber = "923326811085"; // without +
+      const message = `Hello NatureNights 🌙%0A
+I want to order: ${product} (Price: Rs.${price}).%0A
+My details:%0A
+Name:%0A
+Address:%0A
+Phone:`;
+      window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
     }
-
-    // Sticker price update
-    stickers.addEventListener("change", () => {
-      if (selectedProduct && selectedProduct.custom) {
-        let basePrice = 2300;
-        let stickerCount = parseInt(stickers.value);
-        let finalPrice = basePrice + (stickerCount - 1) * 50;
-        modalPrice.innerText = "Rs. " + finalPrice;
-      }
-    });
-
-    continueBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-
-    dispatchBtn.addEventListener("click", () => {
-      let finalPrice = selectedProduct.price;
-
-      if (selectedProduct.custom) {
-        let stickerCount = parseInt(stickers.value);
-        finalPrice = 2300 + (stickerCount - 1) * 50;
-      }
-
-      let dc = 0;
-      if (city.value === "lahore") dc = 400;
-      if (city.value === "islamabad") dc = 500;
-
-      let total = finalPrice + dc;
-      alert(`Dispatching ${selectedProduct.name}\nProduct Price: Rs.${finalPrice}\nDelivery Charges: Rs.${dc}\nTotal: Rs.${total}`);
-      
-      modal.style.display = "none";
-    });
-
-    window.onclick = function(event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
-
-    loadProducts();
   </script>
 </body>
 </html>

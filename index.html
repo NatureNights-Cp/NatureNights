@@ -7,100 +7,119 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #FFD700;
-      text-align: center;
+      background: #000;
+      color: #fff;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
     header {
-      padding: 20px;
-      font-size: 2em;
-      font-weight: bold;
-    }
-    .product {
       background: #111;
-      border-radius: 12px;
+      padding: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: gold;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       padding: 20px;
-      margin: 20px auto;
-      width: 300px;
-      box-shadow: 0 0 15px rgba(255,215,0,0.4);
     }
-    .product img {
-      width: 100%;
+    .card {
+      background: #111;
+      border: 1px solid gold;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(255,215,0,0.3);
+    }
+    .card img {
+      max-width: 100%;
       border-radius: 10px;
-      margin-bottom: 15px;
     }
-    .product h2 {
-      margin: 10px 0;
-      font-size: 1.5em;
+    .card h2 {
+      color: gold;
     }
-    .product p {
-      margin: 5px 0;
-      font-size: 1em;
+    .buttons {
+      margin-top: 10px;
     }
-    button {
-      background-color: #FFD700;
+    .btn {
+      background: gold;
+      color: black;
+      padding: 10px 15px;
+      margin: 5px;
       border: none;
-      color: #000;
-      padding: 10px 20px;
-      margin: 10px 5px;
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
     }
-    button:hover {
-      background-color: #e6c200;
+    .btn:hover {
+      background: #ffdb4d;
     }
   </style>
 </head>
 <body>
   <header>NatureNights</header>
+  <section class="products">
 
-  <!-- Baghawat 804 -->
-  <div class="product">
-    <img src="baghawat804.jpg" alt="Baghawat 804">
-    <h2>Baghawat 804</h2>
-    <p>Notes: Fruity, White Floral, Sweet</p>
-    <p>Price: Rs.1900</p>
-    <button onclick="continueShopping()">Continue Shopping</button>
-    <button onclick="dispatch('Baghawat 804', 1900)">Dispatch Now</button>
-  </div>
+    <!-- Baghawat 804 -->
+    <div class="card">
+      <img src="baghawat804.jpg" alt="Baghawat 804">
+      <h2>Baghawat 804</h2>
+      <p><b>Notes:</b> Fruity, White Floral, Sweet</p>
+      <p><b>Price:</b> Rs. 1900</p>
+      <div class="buttons">
+        <button class="btn" onclick="continueShopping()">Continue Shopping</button>
+        <button class="btn" onclick="dispatch('Baghawat 804')">Dispatch Now</button>
+      </div>
+    </div>
 
-  <!-- Tasadum -->
-  <div class="product">
-    <img src="tasadum.jpg" alt="Tasadum">
-    <h2>Tasadum</h2>
-    <p>Notes: Citrus, Amber, Aromatic</p>
-    <p>Price: Rs.1900</p>
-    <button onclick="continueShopping()">Continue Shopping</button>
-    <button onclick="dispatch('Tasadum', 1900)">Dispatch Now</button>
-  </div>
+    <!-- Tasadum -->
+    <div class="card">
+      <img src="tasadum.jpg" alt="Tasadum">
+      <h2>Tasadum</h2>
+      <p><b>Notes:</b> Citrus, Amber, Aromatic</p>
+      <p><b>Price:</b> Rs. 1900</p>
+      <div class="buttons">
+        <button class="btn" onclick="continueShopping()">Continue Shopping</button>
+        <button class="btn" onclick="dispatch('Tasadum')">Dispatch Now</button>
+      </div>
+    </div>
 
-  <!-- Customized Perfumes -->
-  <div class="product">
-    <img src="customized.jpg" alt="Customized Perfumes">
-    <h2>Customized Perfumes</h2>
-    <p>Price starts from Rs.2300 (1 Sticker)</p>
-    <p>+50 Rs for each extra sticker</p>
-    <button onclick="continueShopping()">Continue Shopping</button>
-    <button onclick="dispatch('Customized Perfume', 2300)">Dispatch Now</button>
-  </div>
+    <!-- Coffee Aroma -->
+    <div class="card">
+      <img src="coffee.jpg" alt="Coffee Aroma">
+      <h2>Coffee Aroma</h2>
+      <p><b>Notes:</b> Coffee Beans</p>
+      <p><b>Price:</b> Rs. 1500</p>
+      <div class="buttons">
+        <button class="btn" onclick="continueShopping()">Continue Shopping</button>
+        <button class="btn" onclick="dispatch('Coffee Aroma')">Dispatch Now</button>
+      </div>
+    </div>
+
+    <!-- Customized Perfumes -->
+    <div class="card">
+      <img src="customized.jpg" alt="Customized Perfumes">
+      <h2>Customized Perfumes</h2>
+      <p><b>Notes:</b> As per choice</p>
+      <p><b>Price:</b> Starting Rs. 2300 (each extra sticker +50)</p>
+      <div class="buttons">
+        <button class="btn" onclick="continueShopping()">Continue Shopping</button>
+        <button class="btn" onclick="dispatch('Customized Perfume')">Dispatch Now</button>
+      </div>
+    </div>
+
+  </section>
 
   <script>
     function continueShopping() {
-      alert("Continue shopping for more NatureNights products!");
+      window.location.href = window.location.href;
     }
-
-    function dispatch(product, price) {
-      const phoneNumber = "923326811085"; // without +
-      const message = `Hello NatureNights 🌙%0A
-I want to order: ${product} (Price: Rs.${price}).%0A
-My details:%0A
-Name:%0A
-Address:%0A
-Phone:`;
-      window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+    function dispatch(productName) {
+      let phone = "+923326811085";
+      let message = `Hello, I want to dispatch an order for ${productName}. My name is ______, Address: ______, Contact: ______.`;
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
     }
   </script>
 </body>

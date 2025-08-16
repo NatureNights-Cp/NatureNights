@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NatureNights</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: goldenrod;
+      text-align: center;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: goldenrod;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid goldenrod;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(218, 165, 32, 0.4);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: goldenrod;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .shop-btn {
+      background: transparent;
+      color: goldenrod;
+      border: 1px solid goldenrod;
+    }
+
+    .dispatch-btn {
+      background: goldenrod;
+      color: black;
+    }
+
+    select {
+      padding: 5px;
+      border-radius: 6px;
+      border: 1px solid goldenrod;
+      background: black;
+      color: goldenrod;
+    }
+  </style>
+</head>
+<body>
+  <header>NatureNights Showroom</header>
+
+  <section class="products">
+    <!-- Baghawat 804 -->
+    <div class="card">
+      <h2>Baghawat 804</h2>
+      <p><b>Notes:</b> Fruity, White Floral, Sweet</p>
+      <p><b>Price:</b> Rs. 1900</p>
+      <button class="shop-btn">Continue Shopping</button>
+      <button class="dispatch-btn" onclick="dispatchNow('Baghawat 804', 1900)">Dispatch Now</button>
+    </div>
+
+    <!-- Tasadum -->
+    <div class="card">
+      <h2>Tasadum</h2>
+      <p><b>Notes:</b> Citrus, Amber, Aromatic</p>
+      <p><b>Price:</b> Rs. 1900</p>
+      <button class="shop-btn">Continue Shopping</button>
+      <button class="dispatch-btn" onclick="dispatchNow('Tasadum', 1900)">Dispatch Now</button>
+    </div>
+
+    <!-- Customized Perfume -->
+    <div class="card">
+      <h2>Customized Perfume</h2>
+      <p><b>Base Price:</b> Rs. 2300 (includes 1 sticker)</p>
+      <label for="stickers">Choose Stickers:</label>
+      <select id="stickers" onchange="updatePrice()">
+        <option value="1">1 Sticker</option>
+        <option value="2">2 Stickers</option>
+        <option value="3">3 Stickers</option>
+        <option value="4">4 Stickers</option>
+      </select>
+      <p id="customPrice"><b>Price:</b> Rs. 2300</p>
+      <button class="shop-btn">Continue Shopping</button>
+      <button class="dispatch-btn" onclick="customDispatch()">Dispatch Now</button>
+    </div>
+  </section>
+
+  <script>
+    // WhatsApp number
+    const phoneNumber = "923326811085";
+
+    function dispatchNow(product, price) {
+      let msg = `Hello NatureNights 🌙%0A` +
+                `I want to order *${product}* (Price: Rs. ${price}).%0A` +
+                `My details:%0AName:%0AAddress:%0APhone:`;
+      window.open(`https://wa.me/${phoneNumber}?text=${msg}`, "_blank");
+    }
+
+    function updatePrice() {
+      let stickers = document.getElementById("stickers").value;
+      let price = 2300 + (stickers - 1) * 50;
+      document.getElementById("customPrice").innerHTML = `<b>Price:</b> Rs. ${price}`;
+    }
+
+    function customDispatch() {
+      let stickers = document.getElementById("stickers").value;
+      let price = 2300 + (stickers - 1) * 50;
+      let msg = `Hello NatureNights 🌙%0A` +
+                `I want to order *Customized Perfume* with ${stickers} sticker(s) (Price: Rs. ${price}).%0A` +
+                `My details:%0AName:%0AAddress:%0APhone:`;
+      window.open(`https://wa.me/${phoneNumber}?text=${msg}`, "_blank");
+    }
+  </script>
+</body>
+</html>

@@ -4,168 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NatureNights</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background-color: #000;
-      padding: 20px;
-    }
-    header img {
-      max-height: 60px;
-    }
-    h1 {
-      margin: 20px 0;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .product {
-      background: #222;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    }
-    .product img {
-      width: 100%;
-      border-radius: 12px;
-    }
-    .product h2 {
-      font-size: 18px;
-      margin: 10px 0 5px;
-    }
-    .product p {
-      margin: 5px 0;
-    }
-    .btn {
-      display: inline-block;
-      background: goldenrod;
-      color: #000;
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-top: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background: #000;
-      font-size: 14px;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <img src="naturenights.jpg" alt="NatureNights Logo">
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-black text-white py-6 shadow-md">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-3">
+        <img src="naturenights.jpg" alt="NatureNights Logo" class="h-12 w-12 rounded-full">
+        <h1 class="text-2xl font-bold">NatureNights</h1>
+      </div>
+      <div class="text-sm">
+        <p>📞 +92 332 6811085</p>
+        <p>✉️ nn.naturenights@gmail.com</p>
+      </div>
+    </div>
   </header>
-  <h1>Welcome to NatureNights 🌙</h1>
-  <div class="products">
 
-    <!-- Perfumes -->
-    <div class="product">
-      <img src="baghawat804.jpg" alt="Baghawat 804">
-      <h2>Baghawat 804</h2>
-      <p>Notes: Fruity, White floral, Sweet</p>
-      <p>Price: Rs.1900</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Baghawat%20804%20(Price:%20Rs.1900).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+  <!-- Products -->
+  <main class="container mx-auto py-10 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+    <!-- Product 1: Baghawat 804 (Out of Stock) -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="baghawat804.jpg" alt="Baghawat 804" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Baghawat 804</h2>
+      <p class="text-gray-600">Price: Rs. 2500</p>
+      <button disabled class="mt-2 w-full bg-gray-500 text-white py-2 px-4 rounded-md cursor-not-allowed">
+        Out of Stock
+      </button>
     </div>
 
-    <div class="product">
-      <img src="tasadum.jpg" alt="Tasadum">
-      <h2>Tasadum</h2>
-      <p>Notes: Citrus, Amber, Aromatic</p>
-      <p>Price: Rs.1900</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Tasadum%20(Price:%20Rs.1900).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 2 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="pinkfloral.jpg" alt="Pink Floral" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Pink Floral</h2>
+      <p class="text-gray-600">Price: Rs. 2300</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Pink%20Floral%20(Price:%20Rs.2300).%0AMy%20details:%0AName:%0AAddress:%0APhone:" 
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <div class="product">
-      <img src="customized.jpg" alt="Customized Perfumes">
-      <h2>Customized Perfumes</h2>
-      <p>Price starting at Rs.2300</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Perfume%20(Price:%20Rs.2300).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 3 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="alphamen.jpg" alt="Alpha Men" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Alpha Men</h2>
+      <p class="text-gray-600">Price: Rs. 2700</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Alpha%20Men%20(Price:%20Rs.2700).%0AMy%20details:%0AName:%0AAddress:%0APhone:" 
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <div class="product">
-      <img src="coffee.jpg" alt="Coffee Aroma">
-      <h2>Coffee Aroma</h2>
-      <p>Notes: Coffee Beans</p>
-      <p>Price: Rs.1500</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Coffee%20Aroma%20(Price:%20Rs.1500).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 4 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="coffee.jpg" alt="Coffee Aroma" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Coffee Aroma</h2>
+      <p class="text-gray-600">Price: Rs. 1500</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Coffee%20Aroma%20(Price:%20Rs.1500).%0AMy%20details:%0AName:%0AAddress:%0APhone:" 
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <!-- Customized Products -->
-    <div class="product">
-      <img src="teddy.jpg" alt="Teddy Candle">
-      <h2>Customized Teddy Candle</h2>
-      <p>Price: Rs.2000</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Teddy%20Candle%20(Price:%20Rs.2000).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 5 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="teddy.jpg" alt="Customized Teddy Candle" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Customized Teddy Candle</h2>
+      <p class="text-gray-600">Price: Rs. 2000</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Teddy%20Candle%20(Price:%20Rs.2000).%0AMy%20details:%0AName:%0AAddress:%0APhone:"
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <div class="product">
-      <img src="puppy.jpg" alt="Puppy Candle">
-      <h2>Customized Puppy Face Candle</h2>
-      <p>Price: Rs.1800</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Puppy%20Face%20Candle%20(Price:%20Rs.1800).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 6 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="puppy.jpg" alt="Customized Puppy Face Candle" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Customized Puppy Face Candle</h2>
+      <p class="text-gray-600">Price: Rs. 1800</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Puppy%20Face%20Candle%20(Price:%20Rs.1800).%0AMy%20details:%0AName:%0AAddress:%0APhone:"
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <div class="product">
-      <img src="ikshawl.jpg" alt="IK Shawl">
-      <h2>Customized IK Shawl</h2>
-      <p>Price: Rs.2000</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20IK%20Shawl%20(Price:%20Rs.2000).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 7 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="ikshawl.jpg" alt="Customized IK Shawl" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Customized IK Shawl</h2>
+      <p class="text-gray-600">Price: Rs. 2000</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20IK%20Shawl%20(Price:%20Rs.2000).%0AMy%20details:%0AName:%0AAddress:%0APhone:"
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <div class="product">
-      <img src="tray.jpg" alt="Resin Tray">
-      <h2>Customized Resin Tray</h2>
-      <p>Price: Rs.3500</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Resin%20Tray%20(Price:%20Rs.3500).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 8 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="tray.jpg" alt="Customized Resin Tray" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Customized Resin Tray</h2>
+      <p class="text-gray-600">Price: Rs. 3500</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Resin%20Tray%20(Price:%20Rs.3500).%0AMy%20details:%0AName:%0AAddress:%0APhone:"
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <div class="product">
-      <img src="jhumky.jpg" alt="Resin Jhumky">
-      <h2>Customized Resin Jhumky</h2>
-      <p>Price: Rs.1500</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Resin%20Jhumky%20(Price:%20Rs.1500).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 9 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="jhumky.jpg" alt="Customized Resin Jhumky" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Customized Resin Jhumky</h2>
+      <p class="text-gray-600">Price: Rs. 1500</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Resin%20Jhumky%20(Price:%20Rs.1500).%0AMy%20details:%0AName:%0AAddress:%0APhone:"
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <div class="product">
-      <img src="ikjhumky.jpg" alt="IK Jhumky">
-      <h2>Customized IK Jhumky</h2>
-      <p>Price: Rs.1500</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20IK%20Jhumky%20(Price:%20Rs.1500).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 10 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="ikjhumky.jpg" alt="Customized IK Jhumky" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Customized IK Jhumky</h2>
+      <p class="text-gray-600">Price: Rs. 1500</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20IK%20Jhumky%20(Price:%20Rs.1500).%0AMy%20details:%0AName:%0AAddress:%0APhone:"
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <div class="product">
-      <img src="gajra.jpg" alt="Crochet Gajra">
-      <h2>Customized Crochet Gajra</h2>
-      <p>Price: Rs.600</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Crochet%20Gajra%20(Price:%20Rs.600).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 11 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="gajra.jpg" alt="Customized Crochet Gajra" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Customized Crochet Gajra</h2>
+      <p class="text-gray-600">Price: Rs. 600</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Crochet%20Gajra%20(Price:%20Rs.600).%0AMy%20details:%0AName:%0AAddress:%0APhone:"
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-    <!-- New: Customized Phone Cover -->
-    <div class="product">
-      <img src="cover.jpg" alt="Customized Phone Cover">
-      <h2>Customized Phone Cover</h2>
-      <p>Price: Rs.1600</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Phone%20Cover%20(Price:%20Rs.1600).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
+    <!-- Product 12 -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <img src="cover.jpg" alt="Customized Phone Cover" class="w-full h-48 object-cover rounded-md">
+      <h2 class="text-lg font-semibold mt-2">Customized Phone Cover</h2>
+      <p class="text-gray-600">Price: Rs. 1600</p>
+      <a href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Phone%20Cover%20(Price:%20Rs.1600).%0AMy%20details:%0AName:%0AAddress:%0APhone:"
+         target="_blank"
+         class="mt-2 block text-center bg-black text-white py-2 px-4 rounded-md">
+         Order Now
+      </a>
     </div>
 
-  </div>
+  </main>
 
-  <footer>
-    <p>📞 +92 332 6811085 | ✉️ nn.naturenights@gmail.com</p>
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-4 mt-10">
     <p>&copy; 2025 NatureNights. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

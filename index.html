@@ -1,204 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NatureNights</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f8f8;
-    }
-    header {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-    header img {
-      width: 150px;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .product {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      padding: 15px;
-    }
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .product h2 {
-      font-size: 18px;
-      margin: 10px 0 5px;
-    }
-    .product p {
-      margin: 5px 0;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: black;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    footer {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>NatureNights</title>  
+  <style>  
+    body {  
+      font-family: Arial, sans-serif;  
+      margin: 0;  
+      padding: 0;  
+      background: #f8f8f8;  
+    }  
+    header {  
+      background: black;  
+      color: white;  
+      text-align: center;  
+      padding: 15px;  
+    }  
+    header img {  
+      width: 150px;  
+    }  
+    .container {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+      gap: 20px;  
+      padding: 20px;  
+    }  
+    .product {  
+      background: white;  
+      border-radius: 10px;  
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);  
+      text-align: center;  
+      padding: 15px;  
+    }  
+    .product img {  
+      width: 100%;  
+      height: 200px;  
+      object-fit: cover;  
+      border-radius: 8px;  
+    }  
+    .product h2 {  
+      font-size: 18px;  
+      margin: 10px 0 5px;  
+    }  
+    .product p {  
+      margin: 5px 0;  
+    }  
+    .btn {  
+      display: inline-block;  
+      margin-top: 10px;  
+      padding: 10px 15px;  
+      background: black;  
+      color: white;  
+      border-radius: 5px;  
+      text-decoration: none;  
+      font-size: 14px;  
+    }  
+    footer {  
+      background: black;  
+      color: white;  
+      text-align: center;  
+      padding: 15px;  
+      margin-top: 20px;  
+    }  
+  </style>  
+</head>  
+<body>  
+  
+  <header>  
+    <img src="naturenights.jpg" alt="NatureNights Logo">  
+    <h1>NatureNights</h1>  
+  </header>  
+  
+  <div class="container">  
 
-  <header>
-    <img src="naturenights.jpg" alt="NatureNights Logo">
-    <h1>NatureNights</h1>
-  </header>
+    <!-- Baghawat -->  
+    <div class="product">  
+      <img src="baghawat1.png" alt="Baghawat">  
+      <h2>Baghawat</h2>  
+      <p>Main Accords: Fruity, White Floral, Sweet</p>  
+      <p>Unisex</p>  
+      <p>Price: Rs.2499</p>  
+      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Baghawat%20(Price:%20Rs.2499).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>  
+    </div>  
 
-  <div class="container">
+    <!-- Tassadum -->  
+    <div class="product">  
+      <img src="tasadum1.png" alt="Tasadum">  
+      <h2>Tassadum</h2>  
+      <p>Main Accords: Fruity, Citrus, Amber, Aromatic</p>  
+      <p>Unisex</p>  
+      <p>Price: Rs.2299</p>  
+      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Tassadum%20(Price:%20Rs.2299).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>  
+    </div>  
 
-    <!-- Product 1 -->
-    <div class="product">
-      <img src="baghawat804.jpg" alt="Baghawat 804">
-      <h2>Baghawat 804</h2>
-      <p>Price: Rs.1900</p>
-      <button disabled style="background-color: gray; cursor: not-allowed;">Out of Stock</button>
-    </div>
+    <!-- Nafees -->  
+    <div class="product">  
+      <img src="nafees.png" alt="Nafees">  
+      <h2>Nafees</h2>  
+      <p>Main Accords: Floral, Citrus, Fresh, Rose, Fruity, Woody, Patchouli, Warm Spicy</p>  
+      <p>Women Only</p>  
+      <p>Price: Rs.2499</p>  
+      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Nafees%20(Price:%20Rs.2499).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>  
+    </div>  
 
-    <div class="product">
-      <img src="tasadum.jpg" alt="Tasadum">
-      <h2>Tasadum</h2>
-      <p>Notes: Citrus, Amber, Aromatic</p>
-      <p>Price: Rs.1900</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Tasadum%20(Price:%20Rs.1900).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
+    <!-- Inteshar -->  
+    <div class="product">  
+      <img src="inteshar.png" alt="Inteshar">  
+      <h2>Inteshar</h2>  
+      <p>Main Accords: Roasted Coffee, Creamy Vanilla, and Warm Amber</p>  
+      <p>Price: Rs.1999</p>  
+      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Inteshar%20(Price:%20Rs.1999).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>  
+    </div>  
 
-    <div class="product">
-      <img src="customized.jpg" alt="Customized Perfumes">
-      <h2>Customized Perfumes</h2>
-      <p>Price starting at Rs.2300</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Perfume%20(Price:%20Rs.2300).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
+    <!-- Customized Perfume Bottle -->  
+    <div class="product">  
+      <img src="cust.png" alt="Customized Perfume Bottle">  
+      <h2>Customized Perfume Bottle</h2>  
+      <p>Price: Rs.2999</p>  
+      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Perfume%20Bottle%20(Price:%20Rs.2999).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>  
+    </div>  
 
-    <div class="product">
-      <img src="coffee.jpg" alt="Coffee Aroma">
-      <h2>Coffee Aroma</h2>
-      <p>Notes: Coffee Beans</p>
-      <p>Price: Rs.1500</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Coffee%20Aroma%20(Price:%20Rs.1500).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
+    <!-- Customized Jar Candle -->  
+    <div class="product">  
+      <img src="candle1.png" alt="Customized Jar Candle">  
+      <h2>Customized Jar Candle</h2>  
+      <p>Price: Rs.1199</p>  
+      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Jar%20Candle%20(Price:%20Rs.1199).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>  
+    </div>  
 
-    <!-- Customized Products -->
-    <div class="product">
-      <img src="teddy.jpg" alt="Teddy Candle">
-      <h2>Customized Teddy Candle</h2>
-      <p>Price: Rs.2000</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Teddy%20Candle%20(Price:%20Rs.2000).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <div class="product">
-      <img src="puppy.jpg" alt="Puppy Candle">
-      <h2>Customized Puppy Face Candle</h2>
-      <p>Price: Rs.1800</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Puppy%20Face%20Candle%20(Price:%20Rs.1800).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <div class="product">
-      <img src="ikshawl.jpg" alt="IK Shawl">
-      <h2>Customized IK Shawl</h2>
-      <p>Price: Rs.2000</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20IK%20Shawl%20(Price:%20Rs.2000).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <div class="product">
-      <img src="tray.jpg" alt="Resin Tray">
-      <h2>Customized Resin Tray</h2>
-      <p>Price: Rs.3500</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Resin%20Tray%20(Price:%20Rs.3500).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <div class="product">
-      <img src="jhumky.jpg" alt="Resin Jhumky">
-      <h2>Customized Resin Jhumky</h2>
-      <p>Price: Rs.1500</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Resin%20Jhumky%20(Price:%20Rs.1500).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <div class="product">
-      <img src="ikjhumky.jpg" alt="IK Jhumky">
-      <h2>Customized IK Jhumky</h2>
-      <p>Price: Rs.1500</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20IK%20Jhumky%20(Price:%20Rs.1500).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <div class="product">
-      <img src="gajra.jpg" alt="Crochet Gajra">
-      <h2>Customized Crochet Gajra</h2>
-      <p>Price: Rs.600</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Crochet%20Gajra%20(Price:%20Rs.600).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <!-- New: Customized Phone Cover -->
-    <div class="product">
-      <img src="cover.jpg" alt="Customized Phone Cover">
-      <h2>Customized Phone Cover</h2>
-      <p>Price: Rs.1600</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Phone%20Cover%20(Price:%20Rs.1600).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <!-- 🔥 Newly Added Products -->
-    <div class="product">
-      <img src="coaster.jpg" alt="Crochet Coaster">
-      <h2>Rose bouquet turnable coaster</h2>
-      <p>Price: Rs.800</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Dual%20Purpose%20Crochet%20Glass%20Coaster%20(Price:%20Rs.600).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <div class="product">
-      <img src="redgajra.jpg" alt="Ribbon Rose Gajra">
-      <h2>Customized Ribbon Rose Gajra</h2>
-      <p>Price: Rs.1600</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Ribbon%20Rose%20Gajra%20(Price:%20Rs.1600).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <div class="product">
-      <img src="ribbon.jpg" alt="Ribbon Gajra">
-      <h2>Customized Ribbon Gajra</h2>
-      <p>Price: Rs.1600</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Ribbon%20Gajra%20(Price:%20Rs.1600).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-    <div class="product">
-      <img src="bouquet.jpg" alt="Ribbon Rose Bouquet">
-      <h2>Customized Ribbon Rose Bouquet</h2>
-      <p>Price: Rs.400</p>
-      <a class="btn" href="https://wa.me/923326811085?text=Hello%20NatureNights%20🌙%0AI%20want%20to%20order:%20Customized%20Ribbon%20Rose%20Bouquet%20(Price:%20Rs.1000).%0AMy%20details:%0AName:%0AAddress:%0APhone:">Order Now</a>
-    </div>
-
-  </div>
-
-  <footer>
-    <p>📞 +92 332 6811085  
-    ✉️ nn.naturenights@gmail.com</p>
-    <p>&copy; 2025 NatureNights. All Rights Reserved.</p>
-  </footer>
-
-</body>
+  </div>  
+  
+  <footer>  
+    <p>📞 +92 332 6811085    
+    ✉️ nn.naturenights@gmail.com</p>  
+    <p>&copy; 2025 NatureNights. All Rights Reserved.</p>  
+  </footer>  
+  
+</body>  
 </html>

@@ -68,7 +68,41 @@
     <img src="naturenights.jpg" alt="NatureNights Logo">  
     <h1>NatureNights</h1>  
   </header>    <div class="container">  <!--
+<style>
+/* Snowflake styles */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: #aeefff; /* Light blue color */
+  font-size: 1em;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 
+@keyframes fall {
+  0% { transform: translateY(0) }
+  100% { transform: translateY(100vh) }
+}
+</style>
+
+<script>
+// Snowfall script
+const snowflakeCount = 50; // Number of snowflakes
+for (let i = 0; i < snowflakeCount; i++) {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.textContent = '❄'; // Snowflake emoji
+  snowflake.style.left = Math.random() * window.innerWidth + 'px';
+  snowflake.style.fontSize = (Math.random() * 20 + 10) + 'px';
+  snowflake.style.opacity = Math.random();
+  snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+  document.body.appendChild(snowflake);
+}
+</script>
     <!-- PERFUMES (All Types) -->
     <div class="product">
       <img src="baghawat1.jpg" alt="Baghawat">

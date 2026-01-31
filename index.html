@@ -256,23 +256,94 @@
     <p> &copy; 2025 NatureNights — All Rights Reserved </p>        
   <p> Proudly made in Pakistan 🇵🇰 | Support Palestine 🇦🇪 </p>        
   </footer>     
-<style>    
-/* Snowflake styles */    
-.snowflake {    
-  position: fixed;    
-  top: -10px;    
-  color: white;    
-  font-size: 1em;    
-  user-select: none;    
-  pointer-events: none;    
-  z-index: 9999;    
-  animation-name: fall;    
-  animation-timing-function: linear;    
-  animation-iteration-count: infinite;    
-}  @keyframes fall {  
-0% { transform: translateY(0) }  
-100% { transform: translateY(100vh) }  
-}  
-</style>  <script>        
+   <!-- BLOGS SECTION -->
+<section id="blogs" style="padding: 40px; background: #fff;">
+  <h2 style="text-align:center; color:black;">Our Blogs</h2>
+  <div style="max-width:800px; margin:20px auto; text-align:left; line-height:1.6;">
+    <article>
+      <h3>Fragrance: Your Silent Signature</h3>
+      <p>A scent is more than a fragrance—it’s power, confidence, and identity. The right perfume can make you feel bold, rebellious, or undeniably elegant.
+Choosing your perfect scent isn’t just a task—it’s an experience. Every note, every layer, tells a story about who you are. From daring and adventurous to soft and graceful, your fragrance speaks before you do.
+How to Find Your Signature Scent:
+Know Your Essence: Floral, woody, fresh, or spicy—choose what resonates with you.
+Dress Your Mood: Let your perfume match your moment—day, night, or special occasions.
+Test, Feel, Decide: Perfumes come alive on your skin; find the one that truly blends with you.
+Layer Smartly: Complement your scent with oils or lotions to make it linger longer.
+With the perfect fragrance, every entrance becomes memorable, every encounter leaves an impression, and every day feels elevated. At NatureNights, we believe your scent is your statement—make it unforgettable.</p>
+    </article>
+    <article>
+      <h3>Candles: Light Up Your World with Elegance</h3>
+      <p>A candle is more than just a source of light—it’s an experience, a mood, and a statement of style. The soft glow of a candle can transform any space, creating an atmosphere of calm, luxury, and inspiration.
+At NatureNights, we believe every candle tells a story. From delicate floral aromas to bold, earthy scents, our handcrafted candles are designed to elevate your senses and enrich your surroundings.
+Why Candles Matter:
+Set the Mood: Whether it’s a relaxing evening, a romantic dinner, or a moment of self-reflection, the right candle sets the perfect ambiance.
+Enhance Your Space: A beautifully crafted candle adds a touch of elegance to your home décor.
+A Sensory Experience: Fragrance and light combine to awaken emotions and create unforgettable memories.
+Choosing Your Perfect Candle:
+Know the Scent: Floral, woody, or fruity—pick a fragrance that resonates with your vibe.
+Consider the Occasion: Some candles are perfect for meditation, others for celebrations.
+Quality Matters: Opt for long-lasting, handcrafted candles for a truly luxurious experience.
+Lighting a candle is more than a ritual—it’s a moment of indulgence. At NatureNights, our candles are designed to inspire confidence, calm, and creativity, turning ordinary moments into extraordinary experiences.</p>
+    </article>
+	<article>
+      <h3>Books: Unlock Worlds, Ignite Minds</h3>
+      <p>A book is more than pages bound together—it’s a gateway to new worlds, ideas, and emotions. The right book can inspire confidence, spark curiosity, and awaken a sense of rebellion or wisdom within.
+At NatureNights, we celebrate the power of reading. From timeless classics to modern masterpieces, every book holds the potential to shape your thoughts, elevate your soul, and leave a lasting impact.
+Why Books Matter:
+Expand Your Horizons: Every story or idea takes you on a journey beyond the ordinary.
+Inspire Growth: Reading fuels creativity, knowledge, and self-awareness.
+Escape & Reflect: Books allow moments of introspection, adventure, and escape from the everyday.
+Choosing the Right Book:
+Know Your Mood: Fiction, non-fiction, fantasy, or self-development—pick what resonates.
+Set the Intention: Are you reading to learn, relax, or challenge your perspective?
+Quality Over Quantity: A thoughtfully chosen book enriches far more than dozens read without purpose.
+Books are silent companions that guide, inspire, and transform. Let every page turn be a journey, and every story read be an experience. At NatureNights, we believe reading is the art of igniting the mind and empowering the spirit.</p>
+    </article>
+  </div>
+</section>
+
+<!-- CUSTOMER REVIEWS SECTION -->
+<section id="reviews" style="padding:40px; background:#f0f0f0;">
+  <h2 style="text-align:center; color:black;">Customer Reviews</h2>
+  <div style="max-width:800px; margin:20px auto;">
+    <div id="reviewList"></div>
+    <form id="reviewForm" style="margin-top:20px; text-align:center;">
+      <input type="text" id="reviewerName" placeholder="Your Name" required style="padding:8px; width:40%; margin:5px;">
+      <textarea id="reviewText" placeholder="Write your review" required style="padding:8px; width:60%; margin:5px;"></textarea>
+      <button type="submit" style="padding:10px 20px; background:black; color:white; border:none; cursor:pointer;">Submit Review</button>
+    </form>
+  </div>
+</section>
+
+<!-- CART SECTION -->
+<section id="cart" style="padding:40px; background:#fff;">
+  <h2 style="text-align:center; color:black;">Your Cart</h2>
+  <div style="max-width:800px; margin:20px auto; text-align:center;">
+    <p>Your cart is currently empty.</p>
+    <button style="padding:10px 20px; background:black; color:white; border:none; cursor:pointer;">Go to Checkout</button>
+  </div>
+</section>
+
+<script>
+// Customer reviews functionality
+const reviewForm = document.getElementById('reviewForm');
+const reviewList = document.getElementById('reviewList');
+
+reviewForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('reviewerName').value;
+  const text = document.getElementById('reviewText').value;
+  
+  const reviewDiv = document.createElement('div');
+  reviewDiv.style.border = "1px solid #ccc";
+  reviewDiv.style.padding = "10px";
+  reviewDiv.style.margin = "10px 0";
+  reviewDiv.innerHTML = `<strong>${name}</strong><p>${text}</p>`;
+  
+  reviewList.appendChild(reviewDiv);
+  
+  reviewForm.reset();
+});
+</script> 
 }    
      </script>   </body>        </html>

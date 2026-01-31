@@ -1,135 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NatureNights</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-:root{--gold:#c8a04d}
-body{margin:0;background:#050505;color:white;font-family:Poppins}
-nav{background:black;padding:15px 30px;display:flex;justify-content:space-between;position:sticky;top:0}
-nav h2{color:var(--gold);font-family:Playfair Display}
-.hero{text-align:center;padding:100px 20px;background:#000}
-.hero h1{color:var(--gold);font-size:45px;font-family:Playfair Display}
-
-.tabs{text-align:center;margin:30px}
-.tabs button{margin:5px;padding:8px 18px;border:1px solid var(--gold);background:none;color:var(--gold);border-radius:20px}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:30px}
-.card{background:#111;border-radius:12px;overflow:hidden}
-.card img{width:100%;height:220px;object-fit:cover}
-.card div{padding:15px}
-.gold{color:var(--gold)}
-button{cursor:pointer}
-
-footer{text-align:center;padding:40px;background:black}
-
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:12px 18px;border-radius:30px;text-decoration:none}
-
-#cart{position:fixed;right:-100%;top:0;height:100%;width:300px;background:black;padding:20px;transition:.4s}
-input,textarea{width:100%;margin:10px 0;padding:10px;background:#111;border:none;color:white}
+body{margin:0;font-family:Arial;background:#000;color:#d4af37}
+header{padding:20px;text-align:center;border-bottom:1px solid #333}
+nav a{margin:0 15px;color:#d4af37;text-decoration:none;font-weight:bold}
+.hero{padding:80px 20px;text-align:center;background:#050505}
+.section{padding:50px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.card{border:1px solid #333;padding:15px;border-radius:12px;text-align:center}
+button{background:#d4af37;border:none;padding:10px 20px;border-radius:20px;cursor:pointer}
+footer{text-align:center;padding:30px;border-top:1px solid #333}
+input,textarea{width:100%;padding:8px;margin:5px 0}
+.cart{position:fixed;right:20px;bottom:20px}
 </style>
 </head>
-
 <body>
-
+<header>
+<h1>NatureNights</h1>
+<p>Confidence Ignites Success, Courage Sustains It</p>
 <nav>
-<h2>NatureNights</h2>
-<span onclick="openCart()">🛒 Cart</span>
+<a href="#perfumes">Perfumes</a>
+<a href="#candles">Candles</a>
+<a href="#bags">Bags</a>
+<a href="#reviews">Reviews</a>
+<a href="#blog">Blog</a>
 </nav>
+</header>
 
 <div class="hero">
-<h1>NatureNights</h1>
-<p>Confidence Ignites Success, Courage Sustains It.</p>
+<h2>Luxury Feminine Handmade Brand</h2>
+<p>Proudly Made in Pakistan 🇵🇰 | Support Palestine 🇵🇸</p>
 </div>
 
-<div class="tabs">
-<button onclick="filter('all')">All</button>
-<button onclick="filter('perfume')">Perfumes</button>
-<button onclick="filter('candle')">Candles</button>
-<button onclick="filter('book')">Books</button>
-<button onclick="filter('gift')">Handmade & Gifts</button>
-</div>
-
+<div class="section" id="perfumes">
+<h2>Perfumes</h2>
 <div class="grid">
+<div class="card">Baghawat<button onclick="addCart('Baghawat')">Add</button></div>
+<div class="card">Nafees<button onclick="addCart('Nafees')">Add</button></div>
+<div class="card">Pink Floral<button onclick="addCart('Pink Floral')">Add</button></div>
+<div class="card">Alpha Men<button onclick="addCart('Alpha Men')">Add</button></div>
+</div>
+</div>
 
-<!-- PERFUMES -->
+<div class="section" id="candles">
+<h2>Candles</h2>
+<div class="grid">
+<div class="card">Luxury Candle<button onclick="addCart('Candle')">Add</button></div>
+</div>
+</div>
 
-<div class="card perfume"><img src="baghawat1.jpg"><div><h3>Baghawat 804</h3><p class="gold">2599</p><button onclick="add('Baghawat 804',2599)">Add</button></div></div>
-<div class="card perfume"><img src="tasadum1.jpg"><div><h3>Tassadum</h3><p class="gold">2499</p><button onclick="add('Tassadum',2499)">Add</button></div></div>
-<div class="card perfume"><img src="nafees.jpg"><div><h3>Nafees</h3><p class="gold">2499</p><button onclick="add('Nafees',2499)">Add</button></div></div>
-<div class="card perfume"><img src="inteshar.jpg"><div><h3>Inteshar</h3><p class="gold">2499</p><button onclick="add('Inteshar',2499)">Add</button></div></div>
-<div class="card perfume"><img src="cust.jpg"><div><h3>Customized Bottle</h3><p class="gold">2999</p><button onclick="add('Customized Bottle',2999)">Add</button></div></div>
-<div class="card perfume"><img src="pic.jpg"><div><h3>Picture Bottle</h3><p class="gold">2999</p><button onclick="add('Picture Bottle',2999)">Add</button></div></div>
-<div class="card perfume"><img src="quote.jpg"><div><h3>Quote Bottle</h3><p class="gold">2999</p><button onclick="add('Quote Bottle',2999)">Add</button></div></div>
+<div class="section" id="bags">
+<h2>Bags</h2>
+<div class="grid">
+<div class="card">NatureNights Haul Bag<button onclick="addCart('Bag')">Add</button></div>
+</div>
+</div>
 
-<!-- CANDLES -->
+<div class="section" id="reviews">
+<h2>Customer Reviews</h2>
+<textarea id="review"></textarea>
+<button onclick="saveReview()">Submit Review</button>
+<div id="reviewList"></div>
+</div>
 
-<div class="card candle"><img src="coffeetin.jpg"><div><h3>Coffee Tin Candle</h3><p class="gold">1099</p><button onclick="add('Coffee Candle',1099)">Add</button></div></div>
-<div class="card candle"><img src="motiatin.jpg"><div><h3>Motia Candle</h3><p class="gold">1099</p><button onclick="add('Motia Candle',1099)">Add</button></div></div>
-<div class="card candle"><img src="rosetin.jpg"><div><h3>Rose Candle</h3><p class="gold">1099</p><button onclick="add('Rose Candle',1099)">Add</button></div></div>
-<div class="card candle"><img src="jar.jpg"><div><h3>Jar Candle</h3><p class="gold">999</p><button onclick="add('Jar Candle',999)">Add</button></div></div>
-<div class="card candle"><img src="teddy.jpg"><div><h3>Bear Candle</h3><p class="gold">1999</p><button onclick="add('Bear Candle',1999)">Add</button></div></div>
-<div class="card candle"><img src="puppy.jpg"><div><h3>Puppy Candle</h3><p class="gold">1799</p><button onclick="add('Puppy Candle',1799)">Add</button></div></div>
-
-<!-- BOOKS -->
-
-<div class="card book"><img src="trailofblood.png"><div><h3>Trail of Blood</h3></div></div>
-<div class="card book"><img src="innocencebetrayed.png"><div><h3>Innocence Betrayed</h3></div></div>
-
-<!-- GIFTS -->
-
-<div class="card gift"><img src="tray.jpg"><div><h3>Resin Tray</h3><p class="gold">3499</p><button onclick="add('Resin Tray',3499)">Add</button></div></div>
-<div class="card gift"><img src="jhumky.jpg"><div><h3>Resin Jhumky</h3><p class="gold">1499</p><button onclick="add('Jhumky',1499)">Add</button></div></div>
-<div class="card gift"><img src="gajra.jpg"><div><h3>Crochet Gajra</h3><p class="gold">599</p><button onclick="add('Gajra',599)">Add</button></div></div>
-<div class="card gift"><img src="cover.jpg"><div><h3>Phone Cover</h3><p class="gold">1599</p><button onclick="add('Cover',1599)">Add</button></div></div>
-<div class="card gift"><img src="bouquet.jpg"><div><h3>Ribbon Bouquet</h3><p class="gold">399</p><button onclick="add('Bouquet',399)">Add</button></div></div>
-
+<div class="section" id="blog">
+<h2>Blog</h2>
+<p>Coming Soon</p>
 </div>
 
 <footer>
-<p>📞 +92 332 6811085</p>
-<p>✉️ nn.naturenights@gmail.com</p>
-<p>Proudly made in Pakistan 🇵🇰 | Support Palestine 🇦🇪</p>
+<p>Email: nimshaybareenwr@gmail.com</p>
+<p>WhatsApp: 03326811085</p>
+<p>Proudly Made in Pakistan | Support Palestine</p>
 </footer>
 
-<div id="cart">
-<h3 class="gold">Cart</h3>
-<div id="items"></div>
-<input id="name" placeholder="Name">
-<input id="phone" placeholder="Phone">
-<textarea id="address" placeholder="Address"></textarea>
-<button onclick="checkout()">Checkout WhatsApp</button>
-</div>
-
-<a class="whatsapp" href="https://wa.me/923326811085">WhatsApp</a>
+<div class="cart"><button onclick="showCart()">Cart (<span id="count">0</span>)</button></div>
 
 <script>
 let cart=[];
-
-function add(n,p){cart.push({n,p});render()}
-function openCart(){cartBox.style.right="0"}
-function render(){
-let h="",t=0;
-cart.forEach(i=>{h+=`<p>${i.n} - ${i.p}</p>`;t+=i.p});
-items.innerHTML=h+"<hr>Total:"+t;
-}
-
-function checkout(){
-let msg="Order:%0A";
-cart.forEach(i=>msg+=i.n+"%0A");
-location.href="https://wa.me/923326811085?text="+msg;
-}
-
-function filter(c){
-document.querySelectorAll('.card').forEach(x=>{
-x.style.display=c=='all'||x.classList.contains(c)?'block':'none';
-});
-}
+function addCart(p){cart.push(p);document.getElementById('count').innerText=cart.length}
+function showCart(){alert(cart.join('\n'))}
+function saveReview(){let r=document.getElementById('review').value;let d=document.createElement('p');d.innerText=r;document.getElementById('reviewList').appendChild(d)}
 </script>
-
 </body>
 </html>

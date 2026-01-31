@@ -270,63 +270,7 @@
     </article>
   </div>
 </section>
-
-<!-- Customer Reviews Section -->
-<section id="reviews" style="padding: 20px; background: #fff; margin: 20px 0; border-radius:10px;">
-  <h2 style="text-align:center;">Customer Reviews</h2>
-  <div id="reviews-list"></div>
-  <textarea id="review-input" placeholder="Write your review..." style="width:100%; padding:10px; margin-top:10px;"></textarea>
-  <button onclick="addReview()" style="padding:10px 20px; margin-top:10px; background:black; color:white; border:none; border-radius:5px;">Submit Review</button>
-</section>
-
-<!-- Cart Section -->
-<section id="cart-section" style="padding:20px; background:#fff; margin:20px 0; border-radius:10px;">
-  <h2 style="text-align:center;">Your Cart</h2>
-  <ul id="cart-list"></ul>
-  <button onclick="checkoutCart()" style="padding:10px 20px; margin-top:10px; background:black; color:white; border:none; border-radius:5px;">Checkout via WhatsApp</button>
-</section>
-
-<script>
-let reviewsList = document.getElementById('reviews-list');
-let reviewInput = document.getElementById('review-input');
-let cart = [];
-
-function addReview() {
-  if(reviewInput.value.trim() !== '') {
-    let review = document.createElement('p');
-    review.textContent = reviewInput.value;
-    reviewsList.appendChild(review);
-    reviewInput.value = '';
-  }
-}
-
-function addToCart(productName, price) {
-  cart.push({name: productName, price: price});
-  renderCart();
-}
-
-function renderCart() {
-  let cartList = document.getElementById('cart-list');
-  cartList.innerHTML = '';
-  cart.forEach((item, index) => {
-    let li = document.createElement('li');
-    li.textContent = `${item.name} - Rs.${item.price}`;
-    cartList.appendChild(li);
-  });
-}
-
-function checkoutCart() {
-  if(cart.length === 0) return alert('Cart is empty!');
-  let message = "Hello NatureNights 🌙%0AI want to order:%0A";
-  cart.forEach(item => {
-    message += `${item.name} - Rs.${item.price}%0A`;
-  });
-  message += "%0AMy details:%0AName:%0AAddress:%0APhone:";
-  window.open(`https://wa.me/923326811085?text=${message}`, '_blank');
-}
-</script>
-</script> 
-}    
+} 
 <!-- All your sections (blogs, reviews, cart, etc.) are above this -->
 
 <!-- FOOTER -->
